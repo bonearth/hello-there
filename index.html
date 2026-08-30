@@ -89,20 +89,28 @@
         max-width: 550px;
         margin: auto;
       }
-    .books {
+      .books {
         display: flex;
         align-items: end;
         justify-content: center;
         gap: 7px;
         margin: 28px auto 20px;
         height: 170px;
-    }
-    .mockup {
-      display: block;
-      width: min(100%, 620px);
-      margin: 24px auto 10px;
-      filter: drop-shadow(0 18px 18px #5d4c362b);
-    }
+      }
+      .mockup-frame {
+        width: min(100%, 680px);
+        margin: 26px auto 18px;
+        padding: 10px;
+        border-radius: 22px;
+        background: #fffaf1;
+        box-shadow: 0 18px 36px #5d4c3620;
+      }
+      .mockup {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
       .book {
         width: 92px;
         height: 135px;
@@ -387,11 +395,16 @@
         .title {
           font-size: 30px;
         }
-      .books {
-        transform: scale(0.93);
-        margin-top: 20px;
-      }
-      .mockup { margin-top: 18px; }
+        .books {
+          transform: scale(0.93);
+          margin-top: 20px;
+        }
+        .mockup-frame {
+          width: calc(100% + 18px);
+          margin: 20px -9px 16px;
+          padding: 6px;
+          border-radius: 16px;
+        }
         .grid {
           gap: 9px;
         }
@@ -414,7 +427,13 @@
             Sete livros digitais com receitas práticas, saborosas e feitas com ingredientes que você
             encontra no mercado.
           </p>
-      <img class="mockup" src="assets/fitbook-210-receitas.png" alt="Os sete volumes digitais do FitBook com 210 receitas fit" />
+          <div class="mockup-frame">
+            <img
+              class="mockup"
+              src="assets/fitbook-210-receitas.png"
+              alt="Os sete volumes digitais do FitBook com 210 receitas fit"
+            />
+          </div>
           <a class="cta" href="#oferta">QUERO MINHAS 210 RECEITAS →</a>
           <p class="safe">✓ Compra segura &nbsp; • &nbsp; ✓ Material digital</p>
         </div>
