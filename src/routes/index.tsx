@@ -258,13 +258,7 @@ function Index() {
             +210 Receitas Fit para preparar no dia a dia sem perder o sabor
           </h1>
           <div className="mt-8">
-            <img
-              src={heroMockup}
-              alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
-              width={1536}
-              height={1024}
-              className="mx-auto w-full max-w-md"
-            />
+            <HeroMockup />
           </div>
           <p className="mt-6 text-center text-sm leading-relaxed text-muted-foreground">
             Um guia completo com receitas rápidas, saborosas e com ingredientes que você já tem em
