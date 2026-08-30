@@ -20,7 +20,8 @@ import {
   Gift,
   Star,
 } from "lucide-react";
-import heroMockupAsset from "@/assets/fitbook-hero.png.asset.json";
+import { useRef } from "react";
+import heroMockupAsset from "@/assets/fitbook-covers.png.asset.json";
 const heroMockup = heroMockupAsset.url;
 import pagesMockup from "@/assets/fitbook-pages.png";
 import bundleMockup from "@/assets/fitbook-bundle.png";
