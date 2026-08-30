@@ -210,9 +210,9 @@ function Index() {
           <div className="mt-8">
             <img
               src={heroMockup}
-              alt="Mockup do ebook Fitbook 210 Receitas no tablet, celular e impresso"
-              width={1200}
-              height={912}
+              alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
+              width={1536}
+              height={1024}
               className="mx-auto w-full max-w-md"
             />
           </div>
