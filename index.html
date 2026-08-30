@@ -3,34 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>FitBook | 210 Receitas para Secar</title>
+    <title>FitBook | 210 Receitas Fit</title>
+    <meta
+      name="description"
+      content="FitBook: 7 ebooks digitais com 210 receitas fit para variar café da manhã, lanches, almoço, jantar, sobremesas, bebidas e snacks."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
-        --ink: #183b36;
-        --green: #266755;
-        --lime: #d9efb6;
-        --cream: #fffaf1;
-        --peach: #ffe4c8;
-        --orange: #f47d42;
-        --line: #e8ded0;
+        --ink: #1f352f;
+        --muted: #65746f;
+        --green: #2d6b54;
+        --green-soft: #e9f6e8;
+        --mint: #dff4e8;
+        --cream: #fff8ed;
+        --sand: #f7eddc;
+        --rose: #f8eef0;
+        --orange: #f27a42;
+        --orange-dark: #c85d2f;
+        --line: #eadfce;
+        --card: #ffffff;
       }
       * {
         box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
       }
       body {
         margin: 0;
         background: var(--cream);
         color: var(--ink);
-        font-family:
-          DM Sans,
-          Arial,
-          sans-serif;
+        font-family: "DM Sans", Arial, sans-serif;
       }
       h1,
       h2,
@@ -38,575 +47,759 @@
       p {
         margin: 0;
       }
-      .wrap {
-        max-width: 720px;
-        margin: auto;
-        padding: 0 20px;
+      a {
+        color: inherit;
       }
-      .hero {
-        text-align: center;
-        padding: 26px 0 40px;
-        background:
-          radial-gradient(circle at 5% 15%, #e3f3ca 0 9%, transparent 10%),
-          linear-gradient(180deg, #fff8ed, #fffaf1);
-      }
-      .eyebrow {
-        display: inline-flex;
-        gap: 7px;
-        align-items: center;
+      .topbar {
+        background: #f5dff0;
+        color: #8d5275;
         font-size: 11px;
         font-weight: 800;
-        letter-spacing: 0.8px;
-        color: var(--green);
-        background: #e7f2d8;
-        border-radius: 99px;
-        padding: 8px 13px;
+        text-align: center;
+        padding: 9px 14px;
+        letter-spacing: 0.2px;
       }
-      .eyebrow i {
-        width: 7px;
-        height: 7px;
-        background: #ef824a;
-        border-radius: 50%;
+      .section {
+        padding: 56px 0;
+      }
+      .hero {
+        padding: 28px 0 46px;
+        text-align: center;
+        background:
+          radial-gradient(circle at 10% 10%, #e4f5d9 0 11%, transparent 12%),
+          linear-gradient(180deg, #eaf8e9 0, #fff8ed 72%);
+      }
+      .sand {
+        background: var(--sand);
+      }
+      .green {
+        background: var(--green-soft);
+      }
+      .rose {
+        background: var(--rose);
+      }
+      .wrap {
+        width: min(100% - 34px, 720px);
+        margin: 0 auto;
+      }
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--green);
+        margin-bottom: 10px;
+      }
+      .prehead {
+        color: #d86438;
+        font-size: 11px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.9px;
+        margin-bottom: 10px;
       }
       h1 {
-        font-family:
-          Playfair Display,
-          serif;
-        font-size: 45px;
-        line-height: 1.02;
-        letter-spacing: -1.8px;
-        margin: 18px auto 14px;
-        max-width: 620px;
+        max-width: 650px;
+        margin: 0 auto;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(34px, 7vw, 48px);
+        line-height: 0.98;
+        letter-spacing: -1.1px;
       }
       h1 em {
-        color: #e56537;
+        color: var(--orange);
         font-style: italic;
       }
       .lead {
+        max-width: 560px;
+        margin: 16px auto 0;
+        color: #4f625b;
         font-size: 17px;
-        line-height: 1.5;
-        color: #49625c;
-        max-width: 550px;
-        margin: auto;
-      }
-      .books {
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        gap: 7px;
-        margin: 28px auto 20px;
-        height: 170px;
+        line-height: 1.52;
       }
       .mockup-frame {
         width: min(100%, 680px);
-        margin: 26px auto 18px;
-        padding: 0;
-        border-radius: 22px;
-        background: #fffaf1;
-        box-shadow: 0 18px 36px #5d4c3620;
+        margin: 25px auto 16px;
+        background: transparent;
         overflow: visible;
       }
       .mockup {
         display: block;
         width: 100%;
         height: auto;
-        max-height: none;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 18px;
+        filter: drop-shadow(0 20px 20px rgba(83, 67, 44, 0.2));
       }
-      .book {
-        width: 92px;
-        height: 135px;
-        border-radius: 5px;
-        box-shadow: 0 10px 18px #76624b46;
-        padding: 10px 8px;
-        color: #fff;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-weight: 800;
-        line-height: 0.9;
-      }
-      .book:nth-child(1) {
-        background: #4b9d73;
-        transform: rotate(-8deg);
-      }
-      .book:nth-child(2) {
-        background: #e48b48;
-        height: 152px;
-        transform: rotate(-3deg);
-      }
-      .book:nth-child(3) {
-        background: #264f71;
-        height: 164px;
-        z-index: 2;
-      }
-      .book:nth-child(4) {
-        background: #9a4b50;
-        height: 152px;
-        transform: rotate(3deg);
-      }
-      .book:nth-child(5) {
-        background: #8d6a42;
-        transform: rotate(8deg);
-      }
-      .book small {
-        font-size: 9px;
-      }
-      .book b {
-        font-family: Playfair Display;
-        font-size: 20px;
-      }
-      .cta {
-        border: 0;
-        border-radius: 12px;
-        background: var(--orange);
-        color: white;
-        font: 800 15px DM Sans;
-        padding: 17px 25px;
-        box-shadow: 0 6px 0 #c95d2d;
-        cursor: pointer;
-        text-decoration: none;
-        display: block;
-        max-width: 410px;
-        margin: 15px auto;
-      }
-      .safe {
+      .mini-note {
+        max-width: 440px;
+        margin: 0 auto;
+        color: #897d70;
         font-size: 12px;
-        color: #6e7a72;
+        line-height: 1.45;
       }
-      .section {
-        padding: 48px 0;
-      }
-      .section.alt {
-        background: #f0f7e8;
-      }
-      .section.peach {
-        background: #fff0e1;
+      .arrow {
+        margin: 22px auto 0;
+        color: var(--orange);
+        font-size: 24px;
+        font-weight: 900;
       }
       .kicker {
+        color: #d86438;
         font-size: 12px;
-        color: #e16a37;
-        font-weight: 800;
+        font-weight: 900;
+        letter-spacing: 0.8px;
         text-transform: uppercase;
-        letter-spacing: 1px;
         text-align: center;
       }
       .title {
-        font-family:
-          Playfair Display,
-          serif;
-        font-size: 34px;
-        line-height: 1.1;
-        text-align: center;
-        margin: 9px auto 15px;
         max-width: 590px;
+        margin: 9px auto 12px;
+        text-align: center;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(28px, 5.8vw, 38px);
+        line-height: 1.08;
       }
       .subtitle {
+        max-width: 560px;
+        margin: 0 auto;
+        color: var(--muted);
         text-align: center;
-        color: #60726c;
-        line-height: 1.5;
-        margin: auto;
-        max-width: 550px;
+        line-height: 1.55;
       }
-      .checks {
-        margin: 26px 0;
+      .pill-grid {
         display: grid;
-        gap: 11px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
       }
-      .check {
-        background: white;
+      .pill,
+      .check,
+      .bonus-row,
+      .faq details {
+        background: var(--card);
         border: 1px solid var(--line);
-        box-shadow: 0 4px 12px #624a2410;
-        border-radius: 13px;
-        padding: 16px 16px 16px 47px;
-        position: relative;
-        font-size: 15px;
-        line-height: 1.35;
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(88, 67, 35, 0.08);
       }
-      .check:before {
-        content: "✓";
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
+      .pill {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        min-height: 66px;
+        padding: 13px 14px;
+        font-size: 13px;
+        line-height: 1.25;
+      }
+      .dot {
+        flex: 0 0 31px;
+        width: 31px;
+        height: 31px;
         display: grid;
         place-items: center;
-        background: #dff0c6;
-        color: #25704f;
+        border-radius: 50%;
+        background: var(--mint);
+        color: var(--green);
         font-weight: 900;
       }
-      .warning {
-        background: #fff9f3;
-        border-left: 4px solid var(--orange);
-        border-radius: 9px;
-        padding: 16px;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #71645a;
-      }
-      .grid {
+      .checks {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 13px;
-        margin-top: 25px;
+        gap: 11px;
+        margin-top: 28px;
       }
-      .card {
+      .check {
+        position: relative;
+        padding: 15px 16px 15px 48px;
+        color: #455650;
+        font-size: 14px;
+        line-height: 1.42;
+      }
+      .check:before {
+        content: "";
+        position: absolute;
+        left: 17px;
+        top: 17px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #f8d9c7;
+        box-shadow: inset 0 0 0 5px #fff;
+        border: 2px solid var(--orange);
+      }
+      .compare {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 28px;
+      }
+      .compare-card {
         background: #fff;
-        border-radius: 14px;
-        padding: 18px;
-        border: 1px solid #eee3d7;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        padding: 18px 16px;
+        box-shadow: 0 8px 22px rgba(88, 67, 35, 0.08);
+      }
+      .compare-card.good {
+        background: #ecfbf2;
+        border-color: #b8e5c9;
+      }
+      .compare-card h3 {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        margin-bottom: 12px;
+      }
+      .compare-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 9px;
+        color: #5c6d67;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .product-shot {
+        width: min(100%, 520px);
+        margin: 26px auto 0;
+      }
+      .product-shot img {
+        width: 100%;
+        display: block;
+        height: auto;
+        filter: drop-shadow(0 18px 18px rgba(68, 54, 39, 0.16));
+      }
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .category {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        padding: 14px;
+        min-height: 92px;
         text-align: center;
       }
-      .icon {
-        font-size: 29px;
-      }
-      .card b {
+      .category b {
         display: block;
-        font-size: 15px;
-        margin: 8px 0 4px;
+        margin: 5px 0 4px;
+        font-size: 14px;
       }
-      .card span {
+      .category span {
+        color: var(--muted);
+        display: block;
         font-size: 12px;
-        color: #70817a;
         line-height: 1.35;
-        display: block;
       }
-      .how {
+      .rescue {
+        margin-top: 24px;
+        padding: 18px;
+        border-radius: 16px;
+        background: #fff7ef;
+        border: 1px solid #f4b98e;
+        color: #8f4d2a;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .receive-list {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .receive-list .check {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-size: 13px;
+      }
+      .bonus-stack {
         display: grid;
         gap: 12px;
-        margin-top: 25px;
+        margin-top: 26px;
       }
-      .step {
+      .bonus-row {
         display: flex;
-        gap: 15px;
-        background: #fff;
-        border-radius: 15px;
+        gap: 13px;
         padding: 15px;
-        align-items: center;
+        align-items: flex-start;
       }
-      .num {
-        min-width: 35px;
-        height: 35px;
+      .bonus-row b {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+      .bonus-row span {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      .offer-wrap {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 14px;
+        align-items: stretch;
+      }
+      .timer {
+        display: inline-flex;
+        gap: 7px;
+        align-items: center;
+        justify-content: center;
+        margin: 18px auto 0;
+        padding: 9px 12px;
+        border-radius: 12px;
+        background: #fff;
+        border: 1px solid var(--line);
+        color: var(--orange);
+        font-weight: 900;
+        font-size: 13px;
+      }
+      .offer {
+        position: relative;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 18px;
+        box-shadow: 0 12px 30px rgba(88, 67, 35, 0.11);
+      }
+      .offer.featured {
+        border: 2px solid var(--orange);
+        box-shadow: 0 16px 38px rgba(242, 122, 66, 0.18);
+      }
+      .tag {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 7px 11px;
+        background: var(--green-soft);
+        color: var(--green);
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .featured .tag {
+        background: var(--orange);
+        color: #fff;
+      }
+      .offer h3 {
+        margin-top: 12px;
+        font-size: 19px;
+      }
+      .old {
+        margin-top: 14px;
+        color: #a99d8f;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+      .price {
+        margin: 2px 0 12px;
+        color: var(--orange);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 52px;
+        line-height: 1;
+        font-weight: 800;
+      }
+      .price small {
+        font: 800 15px "DM Sans";
+      }
+      .offer ul {
+        margin: 16px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+        color: #56675f;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .cta {
+        display: block;
+        width: 100%;
+        margin-top: 18px;
+        border-radius: 12px;
+        background: var(--orange);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 14px;
+        padding: 16px 14px;
+        box-shadow: 0 5px 0 var(--orange-dark);
+      }
+      .cta.secondary {
+        background: #fff;
+        color: var(--orange);
+        box-shadow: none;
+        border: 1px solid #f2b38c;
+      }
+      .safe {
+        margin-top: 10px;
+        color: #918579;
+        text-align: center;
+        font-size: 11px;
+      }
+      .testimonial {
+        max-width: 360px;
+        margin: 25px auto 0;
+        background: #17211f;
+        color: #fff;
+        border-radius: 18px;
+        padding: 18px;
+        box-shadow: 0 14px 28px rgba(26, 36, 32, 0.18);
+      }
+      .testimonial p {
+        color: #e7f0ed;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      .testimonial span {
+        display: block;
+        color: #ffb387;
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .guarantee {
+        max-width: 430px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        padding: 24px 22px;
+        text-align: center;
+        box-shadow: 0 12px 28px rgba(88, 67, 35, 0.1);
+      }
+      .seal {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 12px;
         display: grid;
         place-items: center;
         border-radius: 50%;
-        background: var(--green);
-        color: white;
-        font-weight: 800;
-      }
-      .step b {
-        display: block;
-        font-size: 15px;
-      }
-      .step span {
-        display: block;
-        font-size: 13px;
-        color: #6b7e76;
-        margin-top: 3px;
-      }
-      .offer {
-        border: 2px solid #f3b077;
-        border-radius: 19px;
-        background: #fff;
-        padding: 25px 20px;
-        text-align: center;
-        box-shadow: 0 10px 30px #df8f4521;
-        margin-top: 25px;
-      }
-      .ribbon {
-        display: inline-block;
-        background: var(--orange);
-        color: #fff;
-        border-radius: 99px;
-        padding: 7px 14px;
-        font-size: 11px;
-        font-weight: 800;
-      }
-      .price-old {
-        color: #a49a90;
-        text-decoration: line-through;
-        margin-top: 14px;
-        font-size: 14px;
-      }
-      .price {
-        font-family: Playfair Display;
-        font-size: 55px;
-        color: var(--orange);
-        line-height: 1;
-      }
-      .price small {
-        font: 700 17px DM Sans;
-      }
-      .bonus {
-        margin: 19px 0;
-        text-align: left;
-        border-top: 1px solid var(--line);
-        padding-top: 13px;
-        font-size: 13px;
-        line-height: 1.75;
+        background: #10352c;
+        color: #f3d77a;
+        font-weight: 900;
+        border: 5px solid #f3d77a;
       }
       .faq {
-        margin-top: 24px;
+        margin-top: 26px;
+        display: grid;
+        gap: 10px;
       }
       .faq details {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 11px;
-        padding: 15px;
-        margin-bottom: 9px;
-        font-size: 14px;
+        padding: 15px 17px;
       }
       .faq summary {
-        font-weight: 800;
         cursor: pointer;
+        font-weight: 800;
+        font-size: 14px;
       }
       .faq p {
         padding-top: 10px;
-        color: #687972;
+        color: var(--muted);
+        font-size: 13px;
         line-height: 1.5;
       }
-      .final {
-        text-align: center;
-        background: var(--ink);
-        color: #fff;
-        padding: 45px 0;
-      }
-      .final .title {
-        color: #fff;
-      }
-      .final .subtitle {
-        color: #d7e7dd;
-      }
-      .final .cta {
-        background: #f69a56;
-        box-shadow: 0 6px 0 #c96332;
-      }
       .footer {
-        font-size: 11px;
-        color: #8c9993;
+        padding: 24px 16px;
         text-align: center;
-        padding: 22px 5px;
+        color: #9a8f82;
+        font-size: 11px;
       }
-      @media (max-width: 480px) {
-        h1 {
-          font-size: 38px;
+      @media (max-width: 620px) {
+        .wrap {
+          width: min(100% - 28px, 720px);
         }
-        .title {
-          font-size: 30px;
+        .hero {
+          padding-top: 22px;
         }
-        .books {
-          transform: scale(0.93);
-          margin-top: 20px;
+        .pill-grid,
+        .compare,
+        .offer-wrap {
+          grid-template-columns: 1fr;
+        }
+        .category-grid,
+        .receive-list {
+          grid-template-columns: 1fr;
         }
         .mockup-frame {
-          width: calc(100% + 12px);
-          margin: 20px -6px 16px;
-          padding: 0;
-          border-radius: 16px;
-        }
-        .mockup {
-          border-radius: 14px;
-        }
-        .grid {
-          gap: 9px;
-        }
-        .card {
-          padding: 14px;
+          width: calc(100% + 14px);
+          margin-left: -7px;
+          margin-right: -7px;
         }
         .section {
-          padding: 40px 0;
+          padding: 48px 0;
+        }
+        .offer.featured {
+          order: -1;
         }
       }
     </style>
   </head>
   <body>
+    <div class="topbar">Material digital para quem quer variar a alimentação sem complicar a rotina</div>
+
     <main>
       <section class="hero">
         <div class="wrap">
-          <div class="eyebrow"><i></i> EBOOK DIGITAL • ACESSO IMEDIATO</div>
-          <h1>210 receitas fit para você <em>comer bem</em> sem enjoar da rotina</h1>
+          <div class="logo">FitBook</div>
+          <p class="prehead">7 ebooks digitais + acesso imediato</p>
+          <h1>210 receitas fit para <em>comer bem</em> sem enjoar da rotina</h1>
           <p class="lead">
-            Sete livros digitais com receitas práticas, saborosas e feitas com ingredientes que você
-            encontra no mercado.
+            Um acervo prático com receitas de café da manhã, lanches, almoço, jantar,
+            sobremesas, bebidas e snacks para você ter ideias todos os dias.
           </p>
+
           <div class="mockup-frame">
             <img
               class="mockup"
               src="assets/fitbook-210-receitas.png"
-              alt="Os sete volumes digitais do FitBook com 210 receitas fit"
+              alt="Mockup com os 7 ebooks do FitBook 210 receitas"
             />
           </div>
-          <a class="cta" href="#oferta">QUERO MINHAS 210 RECEITAS →</a>
-          <p class="safe">✓ Compra segura &nbsp; • &nbsp; ✓ Material digital</p>
-        </div>
-      </section>
-      <section class="section">
-        <div class="wrap">
-          <p class="kicker">Você se identifica?</p>
-          <h2 class="title">
-            A dificuldade não é querer comer melhor. É não saber o que fazer todos os dias.
-          </h2>
-          <div class="checks">
-            <div class="check">
-              Você abre a geladeira sem ideia do que preparar e acaba repetindo sempre as mesmas
-              refeições.
-            </div>
-            <div class="check">
-              Sente que receitas “fit” são complicadas, sem graça ou pedem ingredientes difíceis de
-              achar.
-            </div>
-            <div class="check">
-              Quer ter opções gostosas para café, almoço, jantar, lanches e até sobremesas.
-            </div>
-            <div class="check">Busca mais praticidade para organizar a alimentação da semana.</div>
-          </div>
-          <div class="warning">
-            <b>O FitBook não é dieta restritiva nem promete resultado milagroso.</b> É um acervo
-            prático para variar sua alimentação com mais leveza e sabor.
-          </div>
-        </div>
-      </section>
-      <section class="section alt">
-        <div class="wrap">
-          <p class="kicker">Em um só lugar</p>
-          <h2 class="title">Seu novo repertório para todos os momentos do dia</h2>
-          <p class="subtitle">
-            São 210 receitas distribuídas em 7 volumes digitais, com preparo simples e variedade de
-            verdade.
+
+          <p class="mini-note">
+            Receitas simples, ingredientes acessíveis e organização por categorias para consultar
+            direto no celular quando bater a dúvida do que preparar.
           </p>
-          <div class="grid">
-            <div class="card">
-              <div class="icon">☀️</div>
-              <b>Café da manhã</b><span>30 receitas para começar bem</span>
-            </div>
-            <div class="card">
-              <div class="icon">🥙</div>
-              <b>Lanches</b><span>30 opções práticas</span>
-            </div>
-            <div class="card">
-              <div class="icon">🍲</div>
-              <b>Almoços</b><span>35 pratos equilibrados</span>
-            </div>
-            <div class="card">
-              <div class="icon">🌙</div>
-              <b>Jantas</b><span>35 receitas leves</span>
-            </div>
-            <div class="card">
-              <div class="icon">🍓</div>
-              <b>Sobremesas fit</b><span>30 doces para aproveitar</span>
-            </div>
-            <div class="card">
-              <div class="icon">🥤</div>
-              <b>Smoothies & bebidas</b><span>20 receitas refrescantes</span>
-            </div>
-            <div class="card">
-              <div class="icon">🍞</div>
-              <b>Pães, bolos & snacks</b><span>30 receitas irresistíveis</span>
-            </div>
-            <div class="card">
-              <div class="icon">📱</div>
-              <b>Leitura no celular</b><span>Consulte quando quiser</span>
-            </div>
-          </div>
+          <div class="arrow">⌄</div>
         </div>
       </section>
-      <section class="section peach">
+
+      <section class="section sand">
         <div class="wrap">
-          <p class="kicker">Sem complicação</p>
-          <h2 class="title">Você não precisa ser expert na cozinha para aproveitar</h2>
-          <div class="how">
-            <div class="step">
-              <div class="num">1</div>
-              <div>
-                <b>Escolha uma receita</b
-                ><span>Encontre opções para o momento que você precisa.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">2</div>
-              <div>
-                <b>Use ingredientes acessíveis</b
-                ><span>Receitas pensadas para a vida real e para o dia a dia.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">3</div>
-              <div>
-                <b>Prepare e varie seu cardápio</b
-                ><span>Tenha novas ideias sempre à mão, direto pelo celular.</span>
-              </div>
-            </div>
+          <h2 class="title">Todo dia surge a mesma dúvida...</h2>
+          <div class="pill-grid">
+            <div class="pill"><span class="dot">1</span><b>O que fazer para comer melhor hoje?</b></div>
+            <div class="pill"><span class="dot">2</span><b>Como variar sem gastar muito?</b></div>
+            <div class="pill"><span class="dot">3</span><b>Como deixar comida fit mais gostosa?</b></div>
+            <div class="pill"><span class="dot">4</span><b>Como sair do básico sem perder tempo?</b></div>
           </div>
+          <p class="subtitle" style="margin-top: 22px">
+            O FitBook foi criado para facilitar sua rotina com opções prontas para todos os momentos do dia.
+          </p>
         </div>
       </section>
+
       <section class="section">
         <div class="wrap">
-          <p class="kicker">Oferta especial</p>
-          <h2 class="title">Leve o FitBook para sua rotina</h2>
-          <div class="offer" id="oferta">
-            <div class="ribbon">ACESSO DIGITAL IMEDIATO</div>
-            <h3 style="font-family: Playfair Display; font-size: 27px; margin: 15px 0 4px">
-              FitBook 210 Receitas para Secar
-            </h3>
-            <p style="font-size: 13px; color: #687972">7 livros digitais • 210 receitas fit</p>
-            <p class="price-old">De R$ 47,90 por apenas</p>
-            <div class="price"><small>R$</small> 16,90</div>
-            <div class="bonus">
-              ✓ 210 receitas organizadas por categoria<br />✓ Modo de preparo, ingredientes e
-              informações por receita<br />✓ Acesso imediato pelo celular, tablet ou computador<br />✓
-              Compra única — sem mensalidade
-            </div>
-            <a class="cta" href="#">QUERO ACESSAR AGORA →</a>
-            <p class="safe">Pagamento processado em ambiente seguro</p>
+          <p class="kicker">Esse material é para você que...</p>
+          <div class="checks">
+            <div class="check">Trava na hora de montar refeições e acaba repetindo sempre as mesmas coisas.</div>
+            <div class="check">Quer receitas fit simples, com sabor de comida de verdade.</div>
+            <div class="check">Precisa de ideias rápidas para café, almoço, jantar, lanches e doces.</div>
+            <div class="check">Quer organizar melhor a alimentação sem seguir dieta restritiva.</div>
+            <div class="check">Prefere consultar tudo pelo celular, de forma prática e visual.</div>
           </div>
         </div>
       </section>
-      <section class="section alt">
+
+      <section class="section rose">
         <div class="wrap">
-          <p class="kicker">Dúvidas frequentes</p>
-          <h2 class="title">Antes de garantir o seu FitBook</h2>
+          <p class="kicker">Menos tempo planejando</p>
+          <h2 class="title">Mais ideias prontas para aplicar</h2>
+          <div class="compare">
+            <div class="compare-card">
+              <h3>Antes</h3>
+              <ul>
+                <li>Sem saber o que preparar.</li>
+                <li>Repetindo arroz, frango e salada.</li>
+                <li>Procurando receitas soltas na internet.</li>
+                <li>Desanimando por falta de variedade.</li>
+              </ul>
+            </div>
+            <div class="compare-card good">
+              <h3>Depois</h3>
+              <ul>
+                <li>210 ideias organizadas por categoria.</li>
+                <li>Opções para qualquer momento do dia.</li>
+                <li>Receitas com ingredientes acessíveis.</li>
+                <li>Mais praticidade para montar a semana.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <p class="kicker">O que é o FitBook?</p>
+          <h2 class="title">Um kit digital com 7 livros de receitas fit</h2>
+          <p class="subtitle">
+            Você recebe um material organizado para abrir, escolher uma receita e preparar sem ficar
+            pulando de site em site procurando inspiração.
+          </p>
+          <div class="product-shot">
+            <img src="assets/fitbook-210-receitas.png" alt="Os sete ebooks do FitBook" />
+          </div>
+          <div class="category-grid">
+            <div class="category"><span>1-30</span><b>Café da manhã</b><span>30 receitas para começar o dia</span></div>
+            <div class="category"><span>31-60</span><b>Lanches saudáveis</b><span>Opções práticas e saborosas</span></div>
+            <div class="category"><span>61-95</span><b>Almoços</b><span>Refeições leves e completas</span></div>
+            <div class="category"><span>96-130</span><b>Jantas</b><span>Ideias para fechar o dia</span></div>
+            <div class="category"><span>131-160</span><b>Sobremesas fit</b><span>Doces para matar a vontade</span></div>
+            <div class="category"><span>161-180</span><b>Smoothies e bebidas</b><span>Receitas refrescantes</span></div>
+            <div class="category"><span>181-210</span><b>Pães, bolos e snacks</b><span>Receitas para variar mais</span></div>
+            <div class="category"><span>Digital</span><b>Acesso no celular</b><span>Consulte quando quiser</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rose">
+        <div class="wrap">
+          <h2 class="title">Pensado para a rotina real de quem quer comer melhor</h2>
+          <p class="subtitle">
+            Nada de depender de receitas complicadas, ingredientes impossíveis ou promessas milagrosas.
+            A ideia é deixar sua rotina mais simples e variada.
+          </p>
+          <div class="checks">
+            <div class="check">Receitas para café, almoço, jantar, lanches, doces e bebidas.</div>
+            <div class="check">Preparo simples para encaixar no dia a dia.</div>
+            <div class="check">Ingredientes fáceis de encontrar no mercado.</div>
+            <div class="check">Material separado por volumes para achar tudo mais rápido.</div>
+            <div class="check">Acesso digital para consultar no celular, tablet ou computador.</div>
+          </div>
+          <div class="rescue">Aviso: este é um guia de receitas. Resultados variam de pessoa para pessoa.</div>
+        </div>
+      </section>
+
+      <section class="section green">
+        <div class="wrap">
+          <h2 class="title">O que você vai receber</h2>
+          <div class="product-shot">
+            <img src="assets/fitbook-210-receitas.png" alt="FitBook 210 Receitas Fit" />
+          </div>
+          <div class="receive-list">
+            <div class="check">Café da manhã: 30 receitas</div>
+            <div class="check">Lanches saudáveis: 30 receitas</div>
+            <div class="check">Almoços: 35 receitas</div>
+            <div class="check">Jantas: 35 receitas</div>
+            <div class="check">Sobremesas fit: 30 receitas</div>
+            <div class="check">Smoothies e bebidas: 20 receitas</div>
+            <div class="check">Pães, bolos e snacks: 30 receitas</div>
+            <div class="check">Acesso digital imediato</div>
+          </div>
+          <div class="arrow">⌄</div>
+        </div>
+      </section>
+
+      <section class="section sand">
+        <div class="wrap">
+          <p class="kicker">Você ainda ganha 5 bônus</p>
+          <h2 class="title">Para deixar sua cozinha mais prática</h2>
+          <div class="bonus-stack">
+            <div class="bonus-row"><span class="dot">01</span><div><b>Guia de Substituições Inteligentes</b><span>Trocas simples para adaptar receitas quando faltar algum ingrediente.</span></div></div>
+            <div class="bonus-row"><span class="dot">02</span><div><b>Tabela Culinária Definitiva</b><span>Medidas, equivalências e apoio rápido para preparar sem confusão.</span></div></div>
+            <div class="bonus-row"><span class="dot">03</span><div><b>30 Ingredientes que Salvam Refeições</b><span>Lista prática para ter base e montar pratos rápidos.</span></div></div>
+            <div class="bonus-row"><span class="dot">04</span><div><b>21 Receitas de Emergência</b><span>Ideias para quando bate a fome e você precisa resolver logo.</span></div></div>
+            <div class="bonus-row"><span class="dot">05</span><div><b>Cozinha Sem Erros</b><span>Dicas para evitar erros comuns e deixar o preparo mais fácil.</span></div></div>
+          </div>
+          <div class="rescue">Somente hoje: você leva tudo em uma oferta especial.</div>
+        </div>
+      </section>
+
+      <section class="section" id="oferta">
+        <div class="wrap">
+          <p class="kicker">Promoção especial</p>
+          <div class="timer">Oferta ativa por tempo limitado</div>
+          <h2 class="title">Escolha a melhor opção para você</h2>
+
+          <div class="offer-wrap">
+            <div class="offer">
+              <span class="tag">Opção básica</span>
+              <h3>FitBook 210 Receitas</h3>
+              <p class="old">De R$ 47,90</p>
+              <div class="price"><small>R$</small>16,90</div>
+              <ul>
+                <li>✓ 7 ebooks digitais</li>
+                <li>✓ 210 receitas fit</li>
+                <li>✓ Acesso imediato</li>
+                <li>✓ Compra única</li>
+              </ul>
+              <a class="cta secondary" href="#">Quero a opção básica</a>
+              <p class="safe">Pagamento seguro</p>
+            </div>
+
+            <div class="offer featured">
+              <span class="tag">Mais escolhido</span>
+              <h3>FitBook + Super Bônus</h3>
+              <p class="old">De R$ 97,90</p>
+              <div class="price"><small>R$</small>26,90</div>
+              <ul>
+                <li>✓ Tudo da opção básica</li>
+                <li>✓ Guia de Substituições Inteligentes</li>
+                <li>✓ Tabela Culinária Definitiva</li>
+                <li>✓ 30 Ingredientes que Salvam</li>
+                <li>✓ 21 Receitas de Emergência</li>
+                <li>✓ Cozinha Sem Erros</li>
+              </ul>
+              <a class="cta" href="#">Quero o Super FitBook</a>
+              <p class="safe">Acesso digital após confirmação</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sand">
+        <div class="wrap">
+          <h2 class="title">O que dizem nossas clientes</h2>
+          <div class="testimonial">
+            <p>
+              "Eu estava sem ideia do que fazer durante a semana. Gostei porque tem opção para
+              tudo: café, almoço, doce, lanche e jantar."
+            </p>
+            <span>Cliente FitBook</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="guarantee">
+            <div class="seal">7D</div>
+            <h2 class="title" style="font-size: 28px">Teste sem medo</h2>
+            <p class="subtitle">
+              Se o material não fizer sentido para você, basta pedir reembolso dentro do prazo
+              informado na plataforma de pagamento.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sand">
+        <div class="wrap">
+          <h2 class="title">Perguntas frequentes</h2>
           <div class="faq">
             <details>
-              <summary>Como vou receber o material?</summary>
-              <p>
-                Após a confirmação do pagamento, você recebe o acesso digital para consultar os
-                livros no celular, tablet ou computador.
-              </p>
-            </details>
-            <details>
-              <summary>Preciso de ingredientes difíceis?</summary>
-              <p>
-                Não. O foco do FitBook é trazer receitas práticas para o dia a dia, com ingredientes
-                comuns e modo de preparo simples.
-              </p>
-            </details>
-            <details>
-              <summary>As receitas servem como dieta?</summary>
-              <p>
-                O material é um guia de receitas. Para orientações alimentares individualizadas,
-                procure um profissional de saúde.
-              </p>
+              <summary>Como vou receber o FitBook?</summary>
+              <p>Você recebe acesso digital após a confirmação do pagamento.</p>
             </details>
             <details>
               <summary>Posso acessar pelo celular?</summary>
-              <p>Sim. Os livros foram organizados para uma consulta prática pelo celular.</p>
+              <p>Sim. O material é digital e pode ser consultado pelo celular, tablet ou computador.</p>
+            </details>
+            <details>
+              <summary>As receitas são uma dieta?</summary>
+              <p>Não. O FitBook é um livro de receitas. Para uma dieta individual, procure um profissional de saúde.</p>
+            </details>
+            <details>
+              <summary>Preciso comprar ingredientes caros?</summary>
+              <p>Não. A proposta é usar ingredientes comuns e preparos possíveis para a rotina.</p>
+            </details>
+            <details>
+              <summary>O pagamento é mensal?</summary>
+              <p>Não. É uma compra única, sem mensalidade.</p>
+            </details>
+            <details>
+              <summary>Qual opção vale mais a pena?</summary>
+              <p>A opção com bônus é a mais completa, porque além das 210 receitas traz guias extras para facilitar a cozinha.</p>
             </details>
           </div>
         </div>
       </section>
-      <section class="final">
-        <div class="wrap">
-          <h2 class="title">Mais sabor e variedade podem começar na sua próxima refeição.</h2>
-          <p class="subtitle">Tenha 210 novas ideias de receitas fit sempre com você.</p>
-          <a class="cta" href="#oferta">QUERO O FITBOOK AGORA →</a>
-        </div>
-      </section>
     </main>
+
     <footer class="footer">
       © 2026 FitBook. Produto digital. Resultados individuais podem variar.
     </footer>
