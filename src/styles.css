@@ -150,3 +150,93 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== Animated hero mockup ===== */
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.6deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.6deg);
+  }
+}
+
+@keyframes hero-shadow {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(-50%) scaleX(0.88);
+    opacity: 0.22;
+  }
+}
+
+@keyframes hero-shine {
+  0% {
+    transform: translateX(-130%) skewX(-18deg);
+  }
+  55%,
+  100% {
+    transform: translateX(230%) skewX(-18deg);
+  }
+}
+
+@keyframes badge-float-a {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes badge-float-b {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.hero-mockup-scene {
+  perspective: 1200px;
+}
+
+.hero-mockup-card {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  animation: hero-float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-mockup-shadow {
+  animation: hero-shadow 6s ease-in-out infinite;
+}
+
+.hero-mockup-shine {
+  animation: hero-shine 4.5s ease-in-out 1.2s infinite;
+}
+
+.hero-badge-a {
+  animation: badge-float-a 5s ease-in-out infinite;
+}
+
+.hero-badge-b {
+  animation: badge-float-b 5.5s ease-in-out 0.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mockup-card,
+  .hero-mockup-shadow,
+  .hero-mockup-shine,
+  .hero-badge-a,
+  .hero-badge-b {
+    animation: none;
+  }
+}

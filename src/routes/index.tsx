@@ -20,7 +20,8 @@ import {
   Gift,
   Star,
 } from "lucide-react";
-import heroMockupAsset from "@/assets/fitbook-hero.png.asset.json";
+import { useRef } from "react";
+import heroMockupAsset from "@/assets/fitbook-covers.png.asset.json";
 const heroMockup = heroMockupAsset.url;
 import pagesMockup from "@/assets/fitbook-pages.png";
 import bundleMockup from "@/assets/fitbook-bundle.png";
@@ -79,6 +80,55 @@ function Arrow() {
   return (
     <div className="flex justify-center py-6">
       <ChevronDown className="h-6 w-6 text-primary/40" />
+    </div>
+  );
+}
+
+function HeroMockup() {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `rotateY(${x * 8}deg) rotateX(${y * -8}deg)`;
+  };
+
+  const handleLeave = () => {
+    const card = cardRef.current;
+    if (card) card.style.transform = "";
+  };
+
+  return (
+    <div
+      className="hero-mockup-scene relative mx-auto w-full max-w-md"
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+    >
+      <div ref={cardRef} className="hero-mockup-card relative">
+        <img
+          src={heroMockup}
+          alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
+          width={1536}
+          height={1024}
+          className="w-full rounded-2xl"
+        />
+        {/* shine sweep */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+          <div className="hero-mockup-shine absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        </div>
+        {/* floating badges */}
+        <span className="hero-badge-a absolute -top-3 -right-2 rounded-full bg-accent px-3 py-1.5 text-[11px] font-bold tracking-wide text-accent-foreground uppercase shadow-lg">
+          +210 receitas
+        </span>
+        <span className="hero-badge-b absolute -bottom-3 -left-2 rounded-full bg-primary px-3 py-1.5 text-[11px] font-bold tracking-wide text-primary-foreground uppercase shadow-lg">
+          Acesso imediato
+        </span>
+      </div>
+      {/* ground shadow */}
+      <div className="hero-mockup-shadow absolute -bottom-6 left-1/2 h-5 w-3/4 rounded-full bg-primary/30 blur-md" />
     </div>
   );
 }
@@ -208,13 +258,7 @@ function Index() {
             +210 Receitas Fit para preparar no dia a dia sem perder o sabor
           </h1>
           <div className="mt-8">
-            <img
-              src={heroMockup}
-              alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
-              width={1536}
-              height={1024}
-              className="mx-auto w-full max-w-md"
-            />
+            <HeroMockup />
           </div>
           <p className="mt-6 text-center text-sm leading-relaxed text-muted-foreground">
             Um guia completo com receitas rápidas, saborosas e com ingredientes que você já tem em
