@@ -21,7 +21,7 @@ import {
   Star,
 } from "lucide-react";
 import { useRef } from "react";
-import heroMockupAsset from "@/assets/fitbook-covers.png.asset.json";
+import heroMockupAsset from "@/assets/fitbook-shelf.png.asset.json";
 const heroMockup = heroMockupAsset.url;
 import pagesMockup from "@/assets/fitbook-pages.png";
 import bundleMockup from "@/assets/fitbook-bundle.png";
@@ -115,8 +115,8 @@ function HeroMockup() {
           <img
             src={heroMockup}
             alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
-            width={1536}
-            height={1024}
+            width={1200}
+            height={900}
             className="w-full"
           />
           {/* shine sweep */}
