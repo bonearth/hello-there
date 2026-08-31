@@ -103,35 +103,51 @@ function HeroMockup() {
 
   return (
     <div
-      className="hero-mockup-scene relative mx-auto w-full max-w-md"
+      className="hero-mockup-scene relative mx-auto w-full max-w-lg"
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >
+      {/* ambient glow */}
+      <div className="hero-mockup-glow pointer-events-none absolute -inset-10 -z-10" />
+
       <div ref={cardRef} className="hero-mockup-card relative">
-        <img
-          src={heroMockup}
-          alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
-          width={1536}
-          height={1024}
-          className="w-full rounded-2xl"
-        />
-        {/* shine sweep */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
-          <div className="hero-mockup-shine absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <div className="relative overflow-hidden rounded-2xl">
+          <img
+            src={heroMockup}
+            alt="Coleção de 7 ebooks Fitbook com 210 receitas: café da manhã, lanches, almoço, jantas, sobremesas, smoothies e pães"
+            width={1536}
+            height={1024}
+            className="w-full"
+          />
+          {/* shine sweep */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="hero-mockup-shine absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+          </div>
         </div>
+
+        {/* reflection */}
+        <div className="hero-mockup-reflection pointer-events-none absolute inset-x-0 top-full hidden sm:block">
+          <img src={heroMockup} alt="" aria-hidden className="w-full" />
+        </div>
+
         {/* floating badges */}
-        <span className="hero-badge-a absolute -top-3 -right-2 rounded-full bg-accent px-3 py-1.5 text-[11px] font-bold tracking-wide text-accent-foreground uppercase shadow-lg">
+        <span className="hero-badge-a absolute -top-3 -right-1 rounded-full bg-accent px-3.5 py-1.5 text-[11px] font-bold tracking-wide text-accent-foreground uppercase shadow-xl ring-1 ring-white/40">
           +210 receitas
         </span>
-        <span className="hero-badge-b absolute -bottom-3 -left-2 rounded-full bg-primary px-3 py-1.5 text-[11px] font-bold tracking-wide text-primary-foreground uppercase shadow-lg">
+        <span className="hero-badge-b absolute top-1/3 -left-4 rounded-full bg-card/90 px-3.5 py-1.5 text-[11px] font-bold tracking-wide text-foreground uppercase shadow-xl ring-1 ring-border backdrop-blur">
+          7 ebooks
+        </span>
+        <span className="hero-badge-a absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1.5 text-[11px] font-bold tracking-wide text-primary-foreground uppercase shadow-xl">
           Acesso imediato
         </span>
       </div>
+
       {/* ground shadow */}
-      <div className="hero-mockup-shadow absolute -bottom-6 left-1/2 h-5 w-3/4 rounded-full bg-primary/30 blur-md" />
+      <div className="hero-mockup-shadow absolute -bottom-8 left-1/2 h-6 w-4/5 rounded-full bg-primary/30 blur-lg" />
     </div>
   );
 }
+
 
 const doubts = [
   "O que eu faço pra comer hoje sem sair da dieta?",
