@@ -126,9 +126,10 @@ function HeroMockup() {
         </div>
 
         {/* reflection */}
-        <div className="hero-mockup-reflection pointer-events-none absolute inset-x-0 top-full hidden sm:block">
-          <img src={heroMockup} alt="" aria-hidden className="w-full" />
+        <div className="hero-mockup-reflection pointer-events-none absolute inset-x-0 top-full hidden h-16 overflow-hidden sm:block">
+          <img src={heroMockup} alt="" aria-hidden className="absolute bottom-0 w-full" />
         </div>
+
 
         {/* floating badges */}
         <span className="hero-badge-a absolute -top-3 -right-1 rounded-full bg-accent px-3.5 py-1.5 text-[11px] font-bold tracking-wide text-accent-foreground uppercase shadow-xl ring-1 ring-white/40">
