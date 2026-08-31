@@ -225,12 +225,13 @@
   filter: drop-shadow(0 26px 42px color-mix(in oklab, var(--foreground) 22%, transparent));
 }
 
-.hero-mockup-reflection {
-  transform: scaleY(-1);
-  opacity: 0.22;
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 95%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 95%);
-  filter: blur(1px);
+.hero-mockup-floor {
+  background: radial-gradient(
+    60% 100% at 50% 0%,
+    color-mix(in oklab, var(--primary) 22%, transparent),
+    transparent 75%
+  );
+  filter: blur(6px);
 }
 
 
