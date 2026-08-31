@@ -125,16 +125,9 @@ function HeroMockup() {
           </div>
         </div>
 
-        {/* reflection */}
-        <div className="hero-mockup-reflection pointer-events-none absolute inset-x-0 top-full hidden h-14 overflow-hidden sm:block">
-          <img
-            src={heroMockup}
-            alt=""
-            aria-hidden
-            className="absolute inset-x-0 bottom-0 w-full"
-            style={{ height: "auto" }}
-          />
-        </div>
+        {/* subtle glossy floor */}
+        <div className="hero-mockup-floor pointer-events-none absolute inset-x-6 top-full h-10" />
+
 
 
 
