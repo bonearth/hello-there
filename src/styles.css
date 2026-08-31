@@ -228,8 +228,8 @@
 .hero-mockup-reflection {
   transform: scaleY(-1);
   opacity: 0.22;
-  mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.85) 92%);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.85) 92%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 95%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 95%);
   filter: blur(1px);
 }
 
