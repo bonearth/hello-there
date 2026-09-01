@@ -433,14 +433,11 @@ function Index() {
             É um livro digital de receitas fit organizado por refeição, com passo a passo curto,
             macros calculados e substituições para cada ingrediente. Você abre, escolhe e cozinha.
           </p>
-          <img
-            src={pagesMockup}
-            alt="Páginas internas do Fitbook com receitas e tabela de macros"
-            width={1200}
-            height={768}
-            loading="lazy"
-            className="mt-8 w-full"
-          />
+          <p className="mt-6 text-center text-[11px] font-semibold tracking-wide text-accent uppercase">
+            Páginas reais do material
+          </p>
+          <RecipeMarquee />
+
           <div className="mt-8 grid grid-cols-2 gap-3">
             {features.map(({ icon: Icon, label }) => (
               <div
