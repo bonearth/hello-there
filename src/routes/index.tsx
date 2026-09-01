@@ -548,11 +548,11 @@ function Index() {
               <ul className="mt-5 space-y-2 text-sm text-foreground">
                 {[
                   "Tudo do plano essencial",
-                  "Planner de refeições semanal",
-                  "Lista de compras inteligente",
-                  "Guia de marmitas fit",
-                  "50 snacks de 5 minutos",
-                  "Guia de mindset e constância",
+                  "SOS Cozinha: 80 Substituições",
+                  "Tabela Culinária Definitiva",
+                  "30 Ingredientes Que Salvam Qualquer Refeição",
+                  "21 Receitas de Emergência",
+                  "Cozinha Sem Erros",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
