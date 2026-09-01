@@ -23,9 +23,54 @@ import {
 import { useRef } from "react";
 import heroMockupAsset from "@/assets/fitbook-shelf.png.asset.json";
 const heroMockup = heroMockupAsset.url;
-import pagesMockup from "@/assets/fitbook-pages.png";
 import bundleMockup from "@/assets/fitbook-bundle.png";
 import fitFood from "@/assets/fit-food.jpg";
+import receita39 from "@/assets/receita-39.png.asset.json";
+import receita61 from "@/assets/receita-61.png.asset.json";
+import receita99 from "@/assets/receita-99.png.asset.json";
+import receita131 from "@/assets/receita-131.png.asset.json";
+import receita167 from "@/assets/receita-167.png.asset.json";
+import receita202 from "@/assets/receita-202.png.asset.json";
+
+const recipePages = [
+  { url: receita39.url, label: "Lanches", title: "Mini pizza fit de frigideira" },
+  { url: receita61.url, label: "Almoço", title: "Frango grelhado com purê" },
+  { url: receita99.url, label: "Janta", title: "Escondidinho de abóbora" },
+  { url: receita131.url, label: "Sobremesas", title: "Mousse de chocolate" },
+  { url: receita167.url, label: "Bebidas", title: "Chá gelado de frutas vermelhas" },
+  { url: receita202.url, label: "Pães e bolos", title: "Muffin de abobrinha fit" },
+];
+
+function RecipeMarquee() {
+  const loop = [...recipePages, ...recipePages];
+  return (
+    <div className="recipe-marquee mt-8">
+      <div className="recipe-marquee-track">
+        {loop.map((page, i) => (
+          <figure key={`${page.title}-${i}`} className="recipe-marquee-item">
+            <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+              <img
+                src={page.url}
+                alt={`Página do Fitbook: ${page.title}`}
+                width={1024}
+                height={1536}
+                loading="lazy"
+                className="block w-full"
+              />
+            </div>
+            <figcaption className="mt-2 text-center">
+              <span className="text-[11px] font-semibold tracking-wide text-accent uppercase">
+                {page.label}
+              </span>
+              <span className="block text-xs text-muted-foreground">{page.title}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -388,14 +433,11 @@ function Index() {
             É um livro digital de receitas fit organizado por refeição, com passo a passo curto,
             macros calculados e substituições para cada ingrediente. Você abre, escolhe e cozinha.
           </p>
-          <img
-            src={pagesMockup}
-            alt="Páginas internas do Fitbook com receitas e tabela de macros"
-            width={1200}
-            height={768}
-            loading="lazy"
-            className="mt-8 w-full"
-          />
+          <p className="mt-6 text-center text-[11px] font-semibold tracking-wide text-accent uppercase">
+            Páginas reais do material
+          </p>
+          <RecipeMarquee />
+
           <div className="mt-8 grid grid-cols-2 gap-3">
             {features.map(({ icon: Icon, label }) => (
               <div

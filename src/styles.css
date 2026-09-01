@@ -260,3 +260,52 @@
     animation: none;
   }
 }
+
+/* ===== Carrossel infinito de páginas ===== */
+@keyframes recipe-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.recipe-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.recipe-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: recipe-marquee 45s linear infinite;
+}
+
+.recipe-marquee:hover .recipe-marquee-track {
+  animation-play-state: paused;
+}
+
+.recipe-marquee-item {
+  width: 200px;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .recipe-marquee-item {
+    width: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recipe-marquee-track {
+    animation: none;
+  }
+  .recipe-marquee {
+    overflow-x: auto;
+  }
+}
