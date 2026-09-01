@@ -197,28 +197,28 @@ const included = [
 const bonuses = [
   {
     tag: "Bônus 1",
-    title: "Planner de refeições semanal",
-    text: "Monte a semana inteira em 10 minutos e nunca mais improvise no almoço.",
+    title: "SOS Cozinha: 80 Substituições",
+    text: "Não tem um ingrediente? Aqui você acha a troca certa para qualquer receita sem perder o sabor nem a textura.",
   },
   {
     tag: "Bônus 2",
-    title: "Lista de compras inteligente",
-    text: "Compre só o necessário e economize até 30% no mercado.",
+    title: "Tabela Culinária Definitiva",
+    text: "Tempos, temperaturas e medidas exatas para acertar qualquer preparo de primeira — do ovo ao assado.",
   },
   {
     tag: "Bônus 3",
-    title: "Guia de marmitas fit",
-    text: "Congelamento, validade e porcionamento para a semana toda.",
+    title: "30 Ingredientes Que Salvam Qualquer Refeição",
+    text: "A despensa mínima que transforma pratos simples em refeições completas e saborosas.",
   },
   {
     tag: "Bônus 4",
-    title: "50 snacks de 5 minutos",
-    text: "Para matar a vontade de doce sem sair do plano.",
+    title: "21 Receitas de Emergência",
+    text: "Receitas de até 15 minutos para os dias em que o tempo acabou e a fome não.",
   },
   {
     tag: "Bônus 5",
-    title: "Guia de mindset e constância",
-    text: "Como manter a rotina fit mesmo nas semanas corridas.",
+    title: "Cozinha Sem Erros",
+    text: "Os erros que estragam receitas fit — e como evitar cada um deles para nunca mais desperdiçar comida.",
   },
 ];
 
@@ -548,11 +548,11 @@ function Index() {
               <ul className="mt-5 space-y-2 text-sm text-foreground">
                 {[
                   "Tudo do plano essencial",
-                  "Planner de refeições semanal",
-                  "Lista de compras inteligente",
-                  "Guia de marmitas fit",
-                  "50 snacks de 5 minutos",
-                  "Guia de mindset e constância",
+                  "SOS Cozinha: 80 Substituições",
+                  "Tabela Culinária Definitiva",
+                  "30 Ingredientes Que Salvam Qualquer Refeição",
+                  "21 Receitas de Emergência",
+                  "Cozinha Sem Erros",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
