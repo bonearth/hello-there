@@ -261,6 +261,58 @@
   }
 }
 
+/* ===== Mockup dos Super Bônus ===== */
+@keyframes bonus-mockup-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.35deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.35deg);
+  }
+}
+
+@keyframes bonus-mockup-shine {
+  0%,
+  58% {
+    transform: translateX(-180%) skewX(-16deg);
+  }
+  88%,
+  100% {
+    transform: translateX(520%) skewX(-16deg);
+  }
+}
+
+.bonus-mockup-scene {
+  perspective: 1000px;
+}
+
+.bonus-mockup-glow {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--accent) 18%, transparent),
+    transparent 76%
+  );
+  filter: blur(20px);
+}
+
+.bonus-mockup-float {
+  animation: bonus-mockup-float 5.5s ease-in-out infinite;
+  filter: drop-shadow(0 20px 24px color-mix(in oklab, var(--foreground) 20%, transparent));
+  will-change: transform;
+}
+
+.bonus-mockup-shine span {
+  animation: bonus-mockup-shine 5s ease-in-out 1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bonus-mockup-float,
+  .bonus-mockup-shine span {
+    animation: none;
+  }
+}
+
 /* ===== Carrossel infinito de páginas ===== */
 @keyframes recipe-marquee {
   from {
