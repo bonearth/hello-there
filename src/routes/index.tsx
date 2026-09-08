@@ -21,16 +21,18 @@ import {
   Star,
 } from "lucide-react";
 import { useRef } from "react";
-import heroMockupAsset from "@/assets/fitbook-shelf.png.asset.json";
+import heroMockupAsset from "@/assets/fitbook-shelf.webp.asset.json";
 const heroMockup = heroMockupAsset.url;
-import bundleMockup from "@/assets/fitbook-bundle.png";
-import fitFood from "@/assets/fit-food.jpg";
-import receita39 from "@/assets/receita-39.png.asset.json";
-import receita61 from "@/assets/receita-61.png.asset.json";
-import receita99 from "@/assets/receita-99.png.asset.json";
-import receita131 from "@/assets/receita-131.png.asset.json";
-import receita167 from "@/assets/receita-167.png.asset.json";
-import receita202 from "@/assets/receita-202.png.asset.json";
+import bundleMockupAsset from "@/assets/fitbook-bundle.webp.asset.json";
+const bundleMockup = bundleMockupAsset.url;
+import fitFoodAsset from "@/assets/fit-food.webp.asset.json";
+const fitFood = fitFoodAsset.url;
+import receita39 from "@/assets/receita-39.webp.asset.json";
+import receita61 from "@/assets/receita-61.webp.asset.json";
+import receita99 from "@/assets/receita-99.webp.asset.json";
+import receita131 from "@/assets/receita-131.webp.asset.json";
+import receita167 from "@/assets/receita-167.webp.asset.json";
+import receita202 from "@/assets/receita-202.webp.asset.json";
 
 const recipePages = [
   { url: receita39.url, label: "Lanches", title: "Mini pizza fit de frigideira" },
