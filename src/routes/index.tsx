@@ -23,10 +23,8 @@ import {
 import { useRef } from "react";
 import heroMockupAsset from "@/assets/fitbook-shelf.webp.asset.json";
 const heroMockup = heroMockupAsset.url;
-import bundleMockupAsset from "@/assets/fitbook-bundle.webp.asset.json";
-const bundleMockup = bundleMockupAsset.url;
-import fitFoodAsset from "@/assets/fit-food.webp.asset.json";
-const fitFood = fitFoodAsset.url;
+import bonusMockupAsset from "@/assets/bonus-super-mockup.webp.asset.json";
+const bonusMockup = bonusMockupAsset.url;
 import receita39 from "@/assets/receita-39.webp.asset.json";
 import receita61 from "@/assets/receita-61.webp.asset.json";
 import receita99 from "@/assets/receita-99.webp.asset.json";
@@ -511,14 +509,23 @@ function Index() {
       <section className="bg-cream px-5 py-14">
         <div className="mx-auto max-w-xl">
           <SectionTitle>Você ainda ganha 5 Super Bônus</SectionTitle>
-          <img
-            src={fitFood}
-            alt="Refeições fit variadas prontas para a semana"
-            width={1200}
-            height={800}
-            loading="lazy"
-            className="mt-8 w-full rounded-2xl"
-          />
+          <div className="bonus-mockup-scene relative mt-8 py-3">
+            <div className="bonus-mockup-glow pointer-events-none absolute inset-x-8 inset-y-4" />
+            <div className="bonus-mockup-float relative">
+              <img
+                src={bonusMockup}
+                alt="Coleção dos cinco Super Bônus: SOS Cozinha, Tabela Culinária Definitiva, 30 Ingredientes, 21 Receitas de Emergência e Cozinha Sem Erros"
+                width={1400}
+                height={788}
+                loading="lazy"
+                className="block w-full rounded-xl"
+              />
+              <div className="bonus-mockup-shine pointer-events-none absolute inset-0 overflow-hidden rounded-xl">
+                <span className="absolute inset-y-0 w-1/4 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+              </div>
+            </div>
+            <div className="bonus-mockup-shadow pointer-events-none mx-auto mt-1 h-5 w-4/5 rounded-full bg-primary/20 blur-lg" />
+          </div>
           <div className="mt-8 space-y-3">
             {bonuses.map((b) => (
               <div
