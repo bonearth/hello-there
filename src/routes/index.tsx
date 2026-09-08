@@ -485,12 +485,12 @@ function Index() {
         <div className="mx-auto max-w-xl">
           <SectionTitle>O que você vai receber</SectionTitle>
           <img
-            src={bundleMockup}
-            alt="Fitbook 210 Receitas com bônus inclusos"
+            src={heroMockup}
+            alt="Os 7 ebooks do Fitbook 210 Receitas em prateleira de mármore"
             width={1200}
-            height={800}
+            height={900}
             loading="lazy"
-            className="mt-8 w-full"
+            className="mt-8 w-full rounded-2xl shadow-lg"
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {included.map((t) => (
