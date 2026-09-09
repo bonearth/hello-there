@@ -484,14 +484,23 @@ function Index() {
       <section className="bg-mint px-5 py-14">
         <div className="mx-auto max-w-xl">
           <SectionTitle>O que você vai receber</SectionTitle>
-          <img
-            src={heroMockup}
-            alt="Os 7 ebooks do Fitbook 210 Receitas em prateleira de mármore"
-            width={1200}
-            height={900}
-            loading="lazy"
-            className="mt-8 w-full rounded-2xl shadow-lg"
-          />
+          <div className="receive-mockup-scene relative mt-8 py-3">
+            <div className="receive-mockup-glow pointer-events-none absolute inset-x-6 inset-y-2" />
+            <div className="receive-mockup-float relative">
+              <img
+                src={receiveMockup}
+                alt="Os 7 ebooks do Fitbook 210 Receitas em prateleira de mármore"
+                width={1200}
+                height={998}
+                loading="lazy"
+                className="block w-full rounded-2xl"
+              />
+              <div className="receive-mockup-shine pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+                <span className="absolute inset-y-0 w-1/4 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+              </div>
+            </div>
+            <div className="pointer-events-none mx-auto mt-1 h-5 w-4/5 rounded-full bg-primary/20 blur-lg" />
+          </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {included.map((t) => (
               <div
