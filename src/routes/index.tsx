@@ -100,7 +100,7 @@ function Cta({ children, className = "" }: { children: React.ReactNode; classNam
   return (
     <a
       href={CTA_HREF}
-      className={`inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-center text-sm font-bold tracking-wide text-accent-foreground uppercase shadow-lg transition hover:brightness-105 active:scale-[0.99] ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent to-accent-glow px-8 py-4 text-center text-sm font-bold tracking-wide text-accent-foreground uppercase shadow-lg shadow-accent/25 transition hover:brightness-105 active:scale-[0.99] ${className}`}
     >
       {children}
     </a>
@@ -624,7 +624,7 @@ function Index() {
               </ul>
               <a
                 href="#"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-accent-foreground uppercase shadow-lg transition hover:brightness-105"
+                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-accent to-accent-glow px-6 py-3 text-sm font-bold text-accent-foreground uppercase shadow-lg shadow-accent/25 transition hover:brightness-105"
               >
                 Quero o completo
               </a>
