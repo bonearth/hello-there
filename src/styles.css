@@ -313,6 +313,58 @@
   }
 }
 
+/* ===== Mockup "O que você vai receber" ===== */
+@keyframes receive-mockup-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.3deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0.3deg);
+  }
+}
+
+@keyframes receive-mockup-shine {
+  0%,
+  60% {
+    transform: translateX(-180%) skewX(-16deg);
+  }
+  90%,
+  100% {
+    transform: translateX(480%) skewX(-16deg);
+  }
+}
+
+.receive-mockup-scene {
+  perspective: 1000px;
+}
+
+.receive-mockup-glow {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklab, var(--primary-glow) 22%, transparent),
+    transparent 78%
+  );
+  filter: blur(20px);
+}
+
+.receive-mockup-float {
+  animation: receive-mockup-float 5.5s ease-in-out infinite;
+  filter: drop-shadow(0 22px 30px color-mix(in oklab, var(--foreground) 22%, transparent));
+  will-change: transform;
+}
+
+.receive-mockup-shine span {
+  animation: receive-mockup-shine 5s ease-in-out 1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .receive-mockup-float,
+  .receive-mockup-shine span {
+    animation: none;
+  }
+}
+
 /* ===== Carrossel infinito de páginas ===== */
 @keyframes recipe-marquee {
   from {

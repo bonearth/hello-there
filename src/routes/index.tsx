@@ -25,6 +25,8 @@ import heroMockupAsset from "@/assets/fitbook-shelf.webp.asset.json";
 const heroMockup = heroMockupAsset.url;
 import bonusMockupAsset from "@/assets/bonus-super-mockup.webp.asset.json";
 const bonusMockup = bonusMockupAsset.url;
+import receiveMockupAsset from "@/assets/fitbook-receive.webp.asset.json";
+const receiveMockup = receiveMockupAsset.url;
 import receita39 from "@/assets/receita-39.webp.asset.json";
 import receita61 from "@/assets/receita-61.webp.asset.json";
 import receita99 from "@/assets/receita-99.webp.asset.json";
