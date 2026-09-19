@@ -54,7 +54,8 @@ function RecipeMarquee() {
                 alt={`Página do Fitbook: ${page.title}`}
                 width={1024}
                 height={1536}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="block w-full"
               />
             </div>
@@ -487,7 +488,8 @@ function Index() {
             alt="Os 7 ebooks do Fitbook 210 Receitas em prateleira de mármore"
             width={1200}
             height={900}
-            loading="lazy"
+            loading="eager"
+            decoding="async"
             className="mt-8 w-full rounded-2xl shadow-lg"
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -517,7 +519,8 @@ function Index() {
                 alt="Coleção dos cinco Super Bônus: SOS Cozinha, Tabela Culinária Definitiva, 30 Ingredientes, 21 Receitas de Emergência e Cozinha Sem Erros"
                 width={1400}
                 height={788}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="block w-full rounded-xl"
               />
               <div className="bonus-mockup-shine pointer-events-none absolute inset-0 overflow-hidden rounded-xl">
