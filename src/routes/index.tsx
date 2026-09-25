@@ -566,8 +566,8 @@ function Index() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
               <p className="text-sm font-semibold text-muted-foreground">Essencial</p>
-              <p className="mt-3 text-xs text-muted-foreground">de R$ 47 por</p>
-              <p className="font-display text-3xl font-bold text-primary">R$ 19</p>
+              <p className="mt-3 text-xs text-muted-foreground">de R$ 19 por</p>
+              <p className="font-display text-3xl font-bold text-primary">R$ 10,70</p>
               <p className="text-xs text-muted-foreground">pagamento único</p>
               <ul className="mt-5 space-y-2 text-sm text-foreground">
                 <li className="flex gap-2">
@@ -596,8 +596,8 @@ function Index() {
                 Mais escolhido
               </span>
               <p className="text-sm font-semibold text-primary">Completo + 5 bônus</p>
-              <p className="mt-3 text-xs text-muted-foreground">de R$ 97 por</p>
-              <p className="font-display text-4xl font-bold text-accent">R$ 27</p>
+              <p className="mt-3 text-xs text-muted-foreground">de R$ 27 por</p>
+              <p className="font-display text-4xl font-bold text-accent">R$ 23,70</p>
               <p className="text-xs text-muted-foreground">pagamento único</p>
               <ul className="mt-5 space-y-2 text-sm text-foreground">
                 {[
