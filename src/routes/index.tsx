@@ -596,8 +596,8 @@ function Index() {
                 Mais escolhido
               </span>
               <p className="text-sm font-semibold text-primary">Completo + 5 bônus</p>
-              <p className="mt-3 text-xs text-muted-foreground">de R$ 97 por</p>
-              <p className="font-display text-4xl font-bold text-accent">R$ 27</p>
+              <p className="mt-3 text-xs text-muted-foreground">de R$ 27 por</p>
+              <p className="font-display text-4xl font-bold text-accent">R$ 23,70</p>
               <p className="text-xs text-muted-foreground">pagamento único</p>
               <ul className="mt-5 space-y-2 text-sm text-foreground">
                 {[
