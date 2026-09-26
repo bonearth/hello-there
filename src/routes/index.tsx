@@ -20,7 +20,7 @@ import {
   Gift,
   Star,
 } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import heroMockupAsset from "@/assets/fitbook-shelf.webp.asset.json";
 const heroMockup = heroMockupAsset.url;
 import bonusMockupAsset from "@/assets/bonus-super-mockup.webp.asset.json";
@@ -119,6 +119,64 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
     <p className="text-center text-[11px] font-semibold tracking-[0.3em] text-accent uppercase">
       {children}
     </p>
+  );
+}
+
+function CountdownTimer() {
+  const DURATION_MS = 60 * 60 * 1000; // 1 hora
+  const STORAGE_KEY = "fitbook_offer_deadline";
+
+  const [remaining, setRemaining] = useState<number>(DURATION_MS);
+
+  useEffect(() => {
+    let deadline = Number(localStorage.getItem(STORAGE_KEY) || 0);
+    const now = Date.now();
+    if (!deadline || deadline < now) {
+      deadline = now + DURATION_MS;
+      localStorage.setItem(STORAGE_KEY, String(deadline));
+    }
+    const tick = () => {
+      const left = deadline - Date.now();
+      if (left <= 0) {
+        deadline = Date.now() + DURATION_MS;
+        localStorage.setItem(STORAGE_KEY, String(deadline));
+        setRemaining(DURATION_MS);
+      } else {
+        setRemaining(left);
+      }
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const totalSeconds = Math.max(0, Math.floor(remaining / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const segments = [pad(hours), pad(minutes), pad(seconds)];
+
+  return (
+    <div className="mx-auto mt-6 max-w-sm rounded-2xl border border-accent/30 bg-cream px-4 py-5 text-center">
+      <p className="text-[11px] font-bold tracking-[0.25em] text-accent uppercase">
+        Promoção encerra em:
+      </p>
+      <div className="mt-3 flex items-center justify-center gap-2">
+        {segments.map((seg, i) => (
+          <span key={i} className="flex items-center gap-2">
+            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent font-display text-2xl font-bold tabular-nums text-accent-foreground shadow-sm sm:h-14 sm:w-14 sm:text-3xl">
+              {seg}
+            </span>
+            {i < segments.length - 1 && (
+              <span className="font-display text-2xl font-bold text-accent sm:text-3xl">
+                :
+              </span>
+            )}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -585,6 +643,7 @@ function Index() {
       <section id="planos" className="bg-background px-5 py-14">
         <div className="mx-auto max-w-xl">
           <Eyebrow>Oferta por tempo limitado</Eyebrow>
+          <CountdownTimer />
           <SectionTitle>Escolha a melhor opção para você</SectionTitle>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
