@@ -245,26 +245,36 @@ const bonuses = [
     tag: "Bônus 1",
     title: "SOS Cozinha: 80 Substituições",
     text: "Não tem um ingrediente? Aqui você acha a troca certa para qualquer receita sem perder o sabor nem a textura.",
+    price: "R$ 49,90",
+    badge: "#C1EBD6",
   },
   {
     tag: "Bônus 2",
     title: "Tabela Culinária Definitiva",
     text: "Tempos, temperaturas e medidas exatas para acertar qualquer preparo de primeira — do ovo ao assado.",
+    price: "R$ 39,90",
+    badge: "#FDF0C3",
   },
   {
     tag: "Bônus 3",
     title: "30 Ingredientes Que Salvam Qualquer Refeição",
     text: "A despensa mínima que transforma pratos simples em refeições completas e saborosas.",
+    price: "R$ 35,90",
+    badge: "#E7DFFF",
   },
   {
     tag: "Bônus 4",
     title: "21 Receitas de Emergência",
     text: "Receitas de até 15 minutos para os dias em que o tempo acabou e a fome não.",
+    price: "R$ 32,90",
+    badge: "#BEE9D7",
   },
   {
     tag: "Bônus 5",
     title: "Cozinha Sem Erros",
     text: "Os erros que estragam receitas fit — e como evitar cada um deles para nunca mais desperdiçar comida.",
+    price: "R$ 30,90",
+    badge: "#D6E9C1",
   },
 ];
 
