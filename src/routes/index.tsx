@@ -627,12 +627,15 @@ function Index() {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-2xl border border-dashed border-accent/60 p-5 text-center">
-            <p className="text-xs font-bold tracking-widest text-accent uppercase">
-              Tudo isso junto
+          <div className="mt-6 rounded-2xl border border-accent/30 bg-cream px-5 py-6 text-center">
+            <p className="text-sm text-muted-foreground">
+              Valor total dos bônus:{" "}
+              <span className="line-through">R$ 189,50</span>
             </p>
-            <p className="font-display mt-1 text-lg font-bold text-primary">
-              Receitas + bônus liberados no mesmo acesso
+            <p className="font-display mt-2 text-xl font-bold leading-snug text-accent">
+              Somente hoje, você leva
+              <br />
+              tudo de graça!
             </p>
           </div>
         </div>
