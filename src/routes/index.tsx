@@ -20,7 +20,7 @@ import {
   Gift,
   Star,
 } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import heroMockupAsset from "@/assets/fitbook-shelf.webp.asset.json";
 const heroMockup = heroMockupAsset.url;
 import bonusMockupAsset from "@/assets/bonus-super-mockup.webp.asset.json";
