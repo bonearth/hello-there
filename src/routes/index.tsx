@@ -540,23 +540,36 @@ function Index() {
             <div className="bonus-mockup-shadow pointer-events-none mx-auto mt-1 h-5 w-4/5 rounded-full bg-primary/20 blur-lg" />
           </div>
           <div className="mt-8 space-y-3">
-            {bonuses.map((b) => (
+            {bonuses.map((b, i) => (
               <div
                 key={b.title}
-                className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm"
+                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 shadow-md"
               >
-                <Gift className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <div>
+                <div
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full font-display text-xl font-bold text-foreground"
+                  style={{ backgroundColor: b.badge }}
+                >
+                  {i + 1}
+                </div>
+                <div className="min-w-0 flex-1">
                   <p className="text-[11px] font-bold tracking-widest text-accent uppercase">
                     {b.tag}
                   </p>
-                  <p className="text-sm font-semibold text-primary">{b.title}</p>
+                  <p className="text-sm font-bold text-foreground">{b.title}</p>
                   <p className="mt-1 text-sm text-muted-foreground">{b.text}</p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="text-sm text-muted-foreground line-through">
+                      {b.price}
+                    </span>
+                    <span className="text-sm font-extrabold text-primary">
+                      GRÁTIS
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-2xl border border-dashed border-accent/60 p-5 text-center">
+          <div className="mt-6 rounded-2xl border border-dashed border-accent/60 p-5 text-center">
             <p className="text-xs font-bold tracking-widest text-accent uppercase">
               Tudo isso junto
             </p>
