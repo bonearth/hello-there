@@ -643,6 +643,7 @@ function Index() {
       <section id="planos" className="bg-background px-5 py-14">
         <div className="mx-auto max-w-xl">
           <Eyebrow>Oferta por tempo limitado</Eyebrow>
+          <CountdownTimer />
           <SectionTitle>Escolha a melhor opção para você</SectionTitle>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
