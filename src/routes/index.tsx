@@ -627,12 +627,14 @@ function Index() {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-2xl border border-accent/30 bg-cream px-5 py-6 text-center">
-            <p className="text-sm text-muted-foreground">
+          <div className="mt-6 rounded-2xl border-2 border-accent/50 bg-cream px-5 py-6 text-center shadow-sm">
+            <p className="text-sm font-semibold text-foreground">
               Valor total dos bônus:{" "}
-              <span className="line-through">R$ 189,50</span>
+              <span className="line-through decoration-accent/70">
+                R$ 189,50
+              </span>
             </p>
-            <p className="font-display mt-2 text-xl font-bold leading-snug text-accent">
+            <p className="font-display mt-3 text-2xl font-extrabold leading-tight text-accent">
               Somente hoje, você leva
               <br />
               tudo de graça!
