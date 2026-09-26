@@ -245,26 +245,36 @@ const bonuses = [
     tag: "Bônus 1",
     title: "SOS Cozinha: 80 Substituições",
     text: "Não tem um ingrediente? Aqui você acha a troca certa para qualquer receita sem perder o sabor nem a textura.",
+    price: "R$ 49,90",
+    badge: "#C1EBD6",
   },
   {
     tag: "Bônus 2",
     title: "Tabela Culinária Definitiva",
     text: "Tempos, temperaturas e medidas exatas para acertar qualquer preparo de primeira — do ovo ao assado.",
+    price: "R$ 39,90",
+    badge: "#FDF0C3",
   },
   {
     tag: "Bônus 3",
     title: "30 Ingredientes Que Salvam Qualquer Refeição",
     text: "A despensa mínima que transforma pratos simples em refeições completas e saborosas.",
+    price: "R$ 35,90",
+    badge: "#E7DFFF",
   },
   {
     tag: "Bônus 4",
     title: "21 Receitas de Emergência",
     text: "Receitas de até 15 minutos para os dias em que o tempo acabou e a fome não.",
+    price: "R$ 32,90",
+    badge: "#BEE9D7",
   },
   {
     tag: "Bônus 5",
     title: "Cozinha Sem Erros",
     text: "Os erros que estragam receitas fit — e como evitar cada um deles para nunca mais desperdiçar comida.",
+    price: "R$ 30,90",
+    badge: "#D6E9C1",
   },
 ];
 
@@ -530,23 +540,36 @@ function Index() {
             <div className="bonus-mockup-shadow pointer-events-none mx-auto mt-1 h-5 w-4/5 rounded-full bg-primary/20 blur-lg" />
           </div>
           <div className="mt-8 space-y-3">
-            {bonuses.map((b) => (
+            {bonuses.map((b, i) => (
               <div
                 key={b.title}
-                className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm"
+                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 shadow-md"
               >
-                <Gift className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <div>
+                <div
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full font-display text-xl font-bold text-foreground"
+                  style={{ backgroundColor: b.badge }}
+                >
+                  {i + 1}
+                </div>
+                <div className="min-w-0 flex-1">
                   <p className="text-[11px] font-bold tracking-widest text-accent uppercase">
                     {b.tag}
                   </p>
-                  <p className="text-sm font-semibold text-primary">{b.title}</p>
+                  <p className="text-sm font-bold text-foreground">{b.title}</p>
                   <p className="mt-1 text-sm text-muted-foreground">{b.text}</p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="text-sm text-muted-foreground line-through">
+                      {b.price}
+                    </span>
+                    <span className="text-sm font-extrabold text-primary">
+                      GRÁTIS
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-2xl border border-dashed border-accent/60 p-5 text-center">
+          <div className="mt-6 rounded-2xl border border-dashed border-accent/60 p-5 text-center">
             <p className="text-xs font-bold tracking-widest text-accent uppercase">
               Tudo isso junto
             </p>
