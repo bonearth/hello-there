@@ -378,9 +378,108 @@ const faqs = [
   },
 ];
 
+const ESSENCIAL_HREF = "https://pay.wiapy.com/jEiUgx-VaaVy";
+const COMPLETO_HREF = "https://pay.wiapy.com/XBRwnBL61xSQ";
+const UPSELL_HREF = "https://pay.wiapy.com/LOt0sNpCaExJ";
+
+function UpsellModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/70 px-4 py-8 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-md rounded-3xl border-2 border-accent bg-cream p-6 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Fechar"
+          className="absolute top-3 right-3 rounded-full p-1.5 text-muted-foreground transition hover:bg-black/5"
+        >
+          <X className="h-5 w-5" />
+        </button>
+
+        <p className="text-center text-[11px] font-bold tracking-widest text-accent uppercase">
+          Espere! Oportunidade única
+        </p>
+        <h3 className="font-display mt-2 text-center text-2xl leading-tight font-extrabold text-primary">
+          Leve o pacote completo
+          <br />
+          com desconto exclusivo
+        </h3>
+
+        <img
+          src={bonusMockup}
+          alt="Pacote completo com os 5 super bônus"
+          loading="eager"
+          decoding="async"
+          className="mx-auto mt-4 w-full max-w-[280px] rounded-xl"
+        />
+
+        <ul className="mt-4 space-y-2 text-sm text-foreground">
+          {[
+            "As 210 receitas fit completas",
+            "Os 5 Super Bônus SOS Cozinha (R$ 189,50)",
+            "Acesso imediato e garantia de 7 dias",
+          ].map((t) => (
+            <li key={t} className="flex gap-2">
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              {t}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-5 rounded-2xl border-2 border-accent/50 bg-background px-4 py-4 text-center shadow-sm">
+          <p className="text-sm font-semibold text-foreground">
+            De <span className="line-through decoration-accent/70">R$ 49,90</span> por apenas
+          </p>
+          <p className="font-display text-4xl font-extrabold text-accent">R$ 19,90</p>
+          <p className="mt-1 text-xs font-semibold text-muted-foreground">
+            só R$ 9,90 a mais que o essencial
+          </p>
+        </div>
+
+        <a
+          href={UPSELL_HREF}
+          className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-4 text-center text-sm font-bold tracking-wide text-accent-foreground uppercase shadow-lg transition hover:brightness-105 active:scale-[0.99]"
+        >
+          Sim! Quero o completo por R$ 19,90
+        </a>
+        <a
+          href={ESSENCIAL_HREF}
+          className="mt-3 block text-center text-xs text-muted-foreground underline"
+        >
+          Não, obrigado. Quero apenas o essencial por R$ 10
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function Index() {
+  const [showUpsell, setShowUpsell] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
+      {showUpsell && <UpsellModal onClose={() => setShowUpsell(false)} />}
+
       {/* HERO */}
       <section className="bg-cream px-5 pt-12 pb-14">
         <div className="mx-auto max-w-xl">
@@ -670,12 +769,14 @@ function Index() {
                   Acesso imediato
                 </li>
               </ul>
-              <a
-                href="https://pay.wiapy.com/jEiUgx-VaaVy"
+              <button
+                type="button"
+                onClick={() => setShowUpsell(true)}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-bold text-primary transition hover:bg-secondary"
               >
                 Quero o essencial
-              </a>
+              </button>
+
             </div>
 
             <div className="relative rounded-2xl border-2 border-accent bg-cream p-6">
@@ -702,7 +803,7 @@ function Index() {
                 ))}
               </ul>
               <a
-                href="https://pay.wiapy.com/XBRwnBL61xSQ"
+                href={COMPLETO_HREF}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-accent-foreground uppercase shadow-lg transition hover:brightness-105"
               >
                 Quero o completo
