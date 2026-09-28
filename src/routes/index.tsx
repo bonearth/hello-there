@@ -671,7 +671,7 @@ function Index() {
                 </li>
               </ul>
               <a
-                href="#"
+                href="https://pay.wiapy.com/jEiUgx-VaaVy"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-bold text-primary transition hover:bg-secondary"
               >
                 Quero o essencial
