@@ -361,3 +361,7 @@
     overflow-x: auto;
   }
 }
+
+#lovable-badge {
+  display: none !important;
+}
