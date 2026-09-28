@@ -702,7 +702,7 @@ function Index() {
                 ))}
               </ul>
               <a
-                href="#"
+                href="https://pay.wiapy.com/XBRwnBL61xSQ"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-accent-foreground uppercase shadow-lg transition hover:brightness-105"
               >
                 Quero o completo
