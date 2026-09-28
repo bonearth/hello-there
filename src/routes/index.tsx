@@ -769,12 +769,14 @@ function Index() {
                   Acesso imediato
                 </li>
               </ul>
-              <a
-                href="https://pay.wiapy.com/jEiUgx-VaaVy"
+              <button
+                type="button"
+                onClick={() => setShowUpsell(true)}
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-bold text-primary transition hover:bg-secondary"
               >
                 Quero o essencial
-              </a>
+              </button>
+
             </div>
 
             <div className="relative rounded-2xl border-2 border-accent bg-cream p-6">
